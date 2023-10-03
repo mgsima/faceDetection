@@ -34,7 +34,7 @@ class Register extends React.Component {
     }
 
     onSubmitRegister = (event) => {
-        fetch('http://localhost:3000/register',  //fetch automáticamene envía un "GET" request, pero lo que queremos es un POST request:
+        fetch('https://facedetectionserver-hjxz.onrender.com/register',  //fetch automáticamene envía un "GET" request, pero lo que queremos es un POST request:
         {
             method: 'post',
             headers: {'Content-Type': 'application/json'},

@@ -81,7 +81,7 @@ class App extends Component {
   
   onButtonSubmit = () => {
     this.setState({imageURL: this.state.input}, () => {
-      fetch('http://localhost:3000/APIFaceDetection', {
+      fetch('https://facedetectionserver-hjxz.onrender.com/APIFaceDetection', {
         method: 'post',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
@@ -93,7 +93,7 @@ class App extends Component {
           this.displayFaceBox(this.calculateFaceLocation(result));
 
           if (result) {
-            fetch('http://localhost:3000/image', {
+            fetch('https://facedetectionserver-hjxz.onrender.com/image', {
               method: 'put',
               headers: {'Content-Type': 'application/json'},
               body:JSON.stringify({
